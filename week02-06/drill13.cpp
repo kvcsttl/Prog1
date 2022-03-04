@@ -10,7 +10,7 @@ g++ drill13.cpp GUI/Graph.cpp GUI/Window.cpp GUI/GUI.cpp GUI/Simple_window.cpp -
 using namespace Graph_lib;
 
 int randomNumber(){
-	int res = (rand() % 8) + 1;
+	int res = rand() % 7 + 1;
 	return res*100;
 }
 
