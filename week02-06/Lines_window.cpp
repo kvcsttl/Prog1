@@ -26,8 +26,7 @@ Lines_window::Lines_window(Point xy, int w, int h, const string &title)
     attach(next_y);
     attach(xy_out);
     attach(lines);
-
-    // coloring
+    
     color_menu.attach(new Button{Point{0, 0}, 0, 0, "red", cb_red});
     color_menu.attach(new Button{Point{0, 0}, 0, 0, "blue", cb_blue});
     color_menu.attach(new Button{Point{0, 0}, 0, 0, "black", cb_black});
@@ -35,7 +34,6 @@ Lines_window::Lines_window(Point xy, int w, int h, const string &title)
     color_menu.hide();
     attach(menu_button);
 
-    // styling
     style_menu.attach(new Button{Point{0, 0}, 0, 0, "solid", cb_solid});
     style_menu.attach(new Button{Point{0, 0}, 0, 0, "dash", cb_dash});
     style_menu.attach(new Button{Point{0, 0}, 0, 0, "dot", cb_dot});
@@ -65,8 +63,6 @@ void Lines_window::next()
     redraw();
 }
 
-// todo: replace with lambda
-// color callbacks
 void Lines_window::cb_red(Address, Address pw)
 {
     reference_to<Lines_window>(pw).red_pressed();
@@ -87,7 +83,6 @@ void Lines_window::cb_menu(Address, Address pw)
     reference_to<Lines_window>(pw).color_pressed();
 }
 
-// style callbacks
 void Lines_window::cb_solid(Address, Address pw)
 {
     reference_to<Lines_window>(pw).solid_pressed();
