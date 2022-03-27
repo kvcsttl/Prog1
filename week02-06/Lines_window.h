@@ -17,14 +17,14 @@ private:
 
     Out_box xy_out;
 
-    // coloring options
+    
     Menu color_menu;
     Button menu_button;
 
-    // styling options
+    
     Menu style_menu;
     Button style_button;
-    // track menu state
+    
     bool style_open;
 
     void next();
